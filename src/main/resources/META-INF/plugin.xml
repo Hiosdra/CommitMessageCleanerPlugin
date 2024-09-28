@@ -13,8 +13,9 @@
     <actions>
         <action id="RemoveDashAction"
                 class="com.hiosdra.commitmessagecleanerplugin.RemoveDashAction"
-                text="Remove Dashes"
-                description="Removes all dashes from the commit message">
+                text="Clean Commit Message"
+                description="Clean commit message"
+                icon="com.intellij.icons.ExpUiIcons.Actions.ClearCash">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
             <!--<keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>-->
         </action>
