@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.hiosdra.commitmessagecleanerplugin</id>
-    <name>CommitMessageCleanerPlugin</name>
+    <name>CommitMessageCleaner</name>
     <vendor>Hiosdra</vendor>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
