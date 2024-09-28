@@ -16,7 +16,7 @@
                 text="Remove Dashes"
                 description="Removes all dashes from the commit message">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
-            <keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>
+            <!--<keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>-->
         </action>
     </actions>
 </idea-plugin>
