@@ -1,18 +1,22 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.hiosdra.commitmessagecleanerplugin</id>
+    <id>com.hiosdra.commitmessagecleanerplugin</id>
     <name>CommitMessageCleanerPlugin</name>
-    <vendor>hiosdra</vendor>
-
-    <depends>com.intellij.modules.platform</depends>
+    <vendor>Hiosdra</vendor>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.hiosdra.commitmessagecleanerplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>Git4Idea</depends>
 
-    <applicationListeners>
-        <listener class="com.github.hiosdra.commitmessagecleanerplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="RemoveDashAction"
+                class="com.hiosdra.commitmessagecleanerplugin.RemoveDashAction"
+                text="Remove Dashes"
+                description="Removes all dashes from the commit message">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
+            <keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>
+        </action>
+    </actions>
 </idea-plugin>

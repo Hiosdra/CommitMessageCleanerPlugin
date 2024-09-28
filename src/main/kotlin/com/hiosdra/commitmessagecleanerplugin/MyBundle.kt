@@ -1,4 +1,4 @@
-package com.github.hiosdra.commitmessagecleanerplugin
+package com.hiosdra.commitmessagecleanerplugin
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
