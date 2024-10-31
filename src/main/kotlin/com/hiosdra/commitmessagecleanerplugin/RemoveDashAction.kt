@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 package com.hiosdra.commitmessagecleanerplugin
 
 import com.intellij.openapi.actionSystem.ActionUpdateThread
