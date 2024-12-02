@@ -12,7 +12,7 @@
 
     <actions>
         <action id="RemoveDashAction"
-                class="com.hiosdra.commitmessagecleanerplugin.RemoveDashAction"
+                class="com.hiosdra.commitmessagecleanerplugin.CleanCommitMessageAction"
                 text="Clean Commit Message"
                 description="Clean commit message"
                 icon="/icons/clearCash/clearCash.svg">
