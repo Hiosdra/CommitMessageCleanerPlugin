@@ -18,9 +18,9 @@
 
 <!-- Plugin description -->
 <h2>Commit Message Cleaner</h2>
-<p>Simplify your commit messages with the <strong>Commit Message Cleaner</strong> plugin!</p>
-<p>This plugin adds a convenient <em>"Clean Message"</em> button to the commit dialog in IntelliJ IDEA. With just one click, it automatically removes all hyphens ("-") from your commit message, helping you maintain clean and consistent commit logs.</p>
-<p>Perfect for developers who want to quickly standardize commit messages without manual editing. Streamline your workflow with ease!</p>
+<p>Enhance your commit messages with the <strong>Commit Message Cleaner</strong> plugin!</p>
+<p>This plugin adds a convenient <em>"Clean Message"</em> button to the commit dialog in IntelliJ IDEA. With just one click, it formats your commit message by removing hyphens ("-") and underscores ("_"), ensuring clean and consistent commit logs.</p>
+<p>Ideal for developers who want to standardize commit messages quickly and efficiently. Improve your workflow with ease!</p>
 <!-- Plugin description end -->
 
 ## Installation
