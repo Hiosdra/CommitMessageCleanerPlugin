@@ -10,9 +10,7 @@ import com.intellij.openapi.vcs.VcsDataKeys
 
 class CleanCommitMessageAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        val project = e.project
-        val checkinPanel = e.getData(VcsDataKeys.COMMIT_MESSAGE_DOCUMENT)
-        if (project == null || checkinPanel == null) return
+        val checkinPanel = e.getData(VcsDataKeys.COMMIT_MESSAGE_DOCUMENT) ?: return
 
         val commitMessage = checkinPanel.text
         val updatedMessage = CommitMessageCleaner.clean(commitMessage)
