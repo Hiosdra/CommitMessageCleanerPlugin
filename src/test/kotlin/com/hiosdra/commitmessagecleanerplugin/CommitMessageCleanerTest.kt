@@ -51,4 +51,12 @@ class CommitMessageCleanerTest {
         val result = CommitMessageCleaner.clean(commitMessage)
         assertEquals(expected, result)
     }
+
+    @Test
+    fun `should clean without ticket number`() {
+        val commitMessage = "implement-new-feature"
+        val expected = "Implement new feature"
+        val result = CommitMessageCleaner.clean(commitMessage)
+        assertEquals(expected, result)
+    }
 }
