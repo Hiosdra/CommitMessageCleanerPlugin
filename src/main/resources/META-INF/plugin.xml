@@ -15,7 +15,7 @@
                 class="com.hiosdra.commitmessagecleanerplugin.RemoveDashAction"
                 text="Clean Commit Message"
                 description="Clean commit message"
-                icon="com.intellij.icons.ExpUiIcons.Actions.ClearCash">
+                icon="/icons/clearCash/clearCash.svg">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
             <!--<keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>-->
         </action>
