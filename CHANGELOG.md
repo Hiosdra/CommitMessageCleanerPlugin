@@ -3,5 +3,11 @@
 # CommitMessageCleanerPlugin Changelog
 
 ## [Unreleased]
-### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+
+## [0.0.3] - 2024-12-03
+
+- Enable plugin signing
+- Proper versioning from now on
+
+[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.0.3...HEAD
+[0.0.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/commits/v0.0.3
