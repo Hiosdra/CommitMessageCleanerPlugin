@@ -4,6 +4,17 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2025-01-20
+
+- Changelog update - `0.1.0` by @github-actions in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/30
+- Bump org.jetbrains.qodana from 2024.3.3 to 2024.3.4 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/33
+- Bump io.mockk:mockk from 1.13.13 to 1.13.14 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/32
+- Bump JetBrains/qodana-action from 2024.3.3 to 2024.3.4 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/31
+- Bump org.jetbrains.kotlinx.kover from 0.9.0 to 0.9.1 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/34
+- **Tested & updated to Intellij 2025.01 EAP by @Hiosdra in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/36**
+- v0.1.1 by @Hiosdra in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/37
+- @github-actions made their first contribution in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/30
+
 ## [0.1.0] - 2024-12-20
 
 - Changelog update - 0.0.3 by @Hiosdra in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/18
@@ -23,6 +34,7 @@
 - Enable plugin signing
 - Proper versioning from now on
 
-[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.0.3...v0.1.0
 [0.0.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/commits/v0.0.3
