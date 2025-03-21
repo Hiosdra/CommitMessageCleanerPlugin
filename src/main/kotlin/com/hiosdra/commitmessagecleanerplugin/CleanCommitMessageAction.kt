@@ -13,7 +13,7 @@ class CleanCommitMessageAction : AnAction() {
         val checkinPanel = event.getData(VcsDataKeys.COMMIT_MESSAGE_DOCUMENT) ?: return
 
         val commitMessage = checkinPanel.text
-        val updatedMessage = CommitMessageCleaner.clean(commitMessage)
+        val updatedMessage = CommitMessageCleaner.cleanWithTicketNumber(commitMessage)
         WriteAction.runAndWait<Throwable> {
             checkinPanel.setText(updatedMessage)
         }

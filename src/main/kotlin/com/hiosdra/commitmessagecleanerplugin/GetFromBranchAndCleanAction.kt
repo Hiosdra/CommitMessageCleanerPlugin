@@ -22,11 +22,13 @@ class GetFromBranchAndCleanAction : AnAction() {
             return
         }
         val branchName = branch.name
-        val updatedCommitMessage = CommitMessageCleaner.clean(branchName)
 
         val checkinPanel = event.getData(VcsDataKeys.COMMIT_MESSAGE_DOCUMENT) ?: return
+        val commitMessage = checkinPanel.text
+
+        val cleanCommitMessage = CommitMessageCleaner.cleanWithTicketFromBranch(branchName, commitMessage)
         WriteAction.runAndWait<Throwable> {
-            checkinPanel.setText(updatedCommitMessage)
+            checkinPanel.setText(cleanCommitMessage)
         }
     }
 
