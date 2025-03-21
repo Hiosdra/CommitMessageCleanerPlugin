@@ -5,36 +5,38 @@ package com.hiosdra.commitmessagecleanerplugin
 import com.intellij.openapi.util.NlsSafe
 
 object CommitMessageCleaner {
-    private val FORMATTED_MESSAGE_PATTERN = "^[A-Za-z]+-\\d+ \\| .+".toRegex()
-    private val TICKET_PATTERN = "^([A-Za-z]+-\\d+) \\| (.+)$".toRegex()
+    private val TICKET_PATTERN = "^([A-Za-z]+-\\d+)".toRegex()
+    private val FORMATTED_MESSAGE_PATTERN = "$TICKET_PATTERN \\| .+".toRegex()
+    private val TICKET_WITH_MESSAGE_PATTERN = "$TICKET_PATTERN \\| (.+)$".toRegex()
+    private val TICKET_SPACE_MESSAGE_PATTERN = "$TICKET_PATTERN\\s+(.+)$".toRegex()
 
     fun cleanWithTicketNumber(commitMessage: @NlsSafe String): String {
-        val parts = commitMessage
-            .split("-", "_")
-        if (parts.size < 3) return commitMessage // Return original if not enough parts
+        if (commitMessage.isEmpty() || isAlreadyFormatted(commitMessage)) {
+            return commitMessage
+        }
+
+        val parts = splitIntoParts(commitMessage)
+        if (parts.size < 3) return commitMessage
 
         val ticketPrefix = parts[0]
         val ticketNumber = parts[1]
-        val ticket = "$ticketPrefix-$ticketNumber"
 
         return if (isValidTicketNumber(ticketNumber)) {
-            "$ticket | ${normalizeCommitMessage(parts.subList(2, parts.size))}"
+            formatWithTicket("$ticketPrefix-$ticketNumber", extractMessageParts(parts, 2))
         } else {
-            normalizeCommitMessage(parts)
+            normalizeText(parts)
         }
     }
 
     fun getTicket(branchName: @NlsSafe String): String? {
-        val parts = branchName
-            .split("-", "_")
-        if (parts.size < 2) return null // Return null if not enough parts
+        val parts = splitIntoParts(branchName)
+        if (parts.size < 2) return null
 
         val ticketPrefix = parts[0]
         val ticketNumber = parts[1]
-        val ticket = "$ticketPrefix-$ticketNumber"
 
         return if (isValidTicketNumber(ticketNumber)) {
-            ticket
+            "$ticketPrefix-$ticketNumber"
         } else {
             null
         }
@@ -43,39 +45,46 @@ object CommitMessageCleaner {
     fun cleanWithTicketFromBranch(branchName: @NlsSafe String, commitMessage: @NlsSafe String): String {
         val branchTicket = getTicket(branchName) ?: return cleanWithTicketNumber(commitMessage)
 
-        if (isAlreadyFormatted(commitMessage)) {
-            val matchResult = TICKET_PATTERN.find(commitMessage)
-            if (matchResult != null) {
-                val (_, message) = matchResult.destructured
-                return "$branchTicket | $message"
-            }
+        val formattedMatch = TICKET_WITH_MESSAGE_PATTERN.find(commitMessage)
+        if (formattedMatch != null) {
+            val (_, message) = formattedMatch.destructured
+            return formatWithTicket(branchTicket, message)
         }
 
-        val ticketPrefixMatch = "^([A-Za-z]+-\\d+)\\s+(.+)$".toRegex().find(commitMessage)
+        val ticketPrefixMatch = TICKET_SPACE_MESSAGE_PATTERN.find(commitMessage)
         if (ticketPrefixMatch != null) {
             val (_, messageContent) = ticketPrefixMatch.destructured
-            return "$branchTicket | $messageContent"
+            return formatWithTicket(branchTicket, messageContent)
         }
 
-        val parts = commitMessage.split("-", "_")
-        if (parts.size < 3) return "$branchTicket | $commitMessage" // Return original if not enough parts
-
-        val ticketNumber = parts[1]
-        if (!isValidTicketNumber(ticketNumber)) {
-            return "$branchTicket | $commitMessage" // Return original if ticket number is invalid
+        val parts = splitIntoParts(commitMessage)
+        if (parts.size < 3 || !isValidTicketNumber(parts[1])) {
+            return formatWithTicket(branchTicket, commitMessage)
         }
 
-        val justCommitMessage = parts.subList(2, parts.size).joinToString("-")
-        return "$branchTicket | ${normalizeCommitMessage(justCommitMessage.split("-", "_"))}"
+        val messageWords = extractMessageParts(parts, 2)
+        return formatWithTicket(branchTicket, normalizeText(messageWords))
     }
 
-    private fun isAlreadyFormatted(commitMessage: String): Boolean {
-        return FORMATTED_MESSAGE_PATTERN.matches(commitMessage)
-    }
+    private fun splitIntoParts(text: String): List<String> =
+        text.split("-", "_")
 
-    private fun isValidTicketNumber(ticketNumber: String) = ticketNumber.matches("^\\d+$".toRegex())
+    private fun extractMessageParts(parts: List<String>, startIndex: Int): List<String> =
+        parts.subList(startIndex, parts.size)
 
-    private fun normalizeCommitMessage(words: List<String>) =
+    private fun isAlreadyFormatted(message: String): Boolean =
+        FORMATTED_MESSAGE_PATTERN.matches(message)
+
+    private fun isValidTicketNumber(ticketNumber: String): Boolean =
+        ticketNumber.matches("^\\d+$".toRegex())
+
+    private fun normalizeText(words: List<String>): String =
         words.joinToString(" ")
             .replaceFirstChar { it.uppercase() }
+
+    private fun formatWithTicket(ticket: String, message: String): String =
+        "$ticket | $message"
+
+    private fun formatWithTicket(ticket: String, messageParts: List<String>): String =
+        formatWithTicket(ticket, normalizeText(messageParts))
 }
