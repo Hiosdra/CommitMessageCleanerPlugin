@@ -22,8 +22,9 @@ class GetFromBranchAndCleanActionIntegrationTest : BasePlatformTestCase() {
     fun `test get from branch and clean action`() {
         // given
         val branchName = "sample-123-feature-branch"
+        val commitMessage = "Initial commit message"
         val project = mockk<Project>()
-        val document: Document = EditorFactory.getInstance().createDocument("Initial commit message")
+        val document: Document = EditorFactory.getInstance().createDocument(commitMessage)
         val event: AnActionEvent = TestActionEvent.createTestEvent {
             when (it) {
                 CommonDataKeys.PROJECT.name -> project
@@ -45,7 +46,7 @@ class GetFromBranchAndCleanActionIntegrationTest : BasePlatformTestCase() {
         action.actionPerformed(event)
 
         //then
-        assertEquals(CommitMessageCleaner.cleanWithTicketNumber(branchName), document.text)
+        assertEquals(CommitMessageCleaner.cleanWithTicketFromBranch(branchName, commitMessage), document.text)
         verify(exactly = 0) { Notifications.Bus.notify(any()) }
     }
 
