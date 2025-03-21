@@ -45,7 +45,7 @@ class GetFromBranchAndCleanActionIntegrationTest : BasePlatformTestCase() {
         action.actionPerformed(event)
 
         //then
-        assertEquals(CommitMessageCleaner.clean(branchName), document.text)
+        assertEquals(CommitMessageCleaner.cleanWithTicketNumber(branchName), document.text)
         verify(exactly = 0) { Notifications.Bus.notify(any()) }
     }
 

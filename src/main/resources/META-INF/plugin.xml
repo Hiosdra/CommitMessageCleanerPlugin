@@ -21,8 +21,8 @@
         </action>
         <action id="com.hiosdra.commitmessagecleanerplugin.GetFromBranchAndCleanAction"
                 class="com.hiosdra.commitmessagecleanerplugin.GetFromBranchAndCleanAction"
-                text="Get From Branch And Clean"
-                description="Get branch name then clean"
+                text="Get Ticket From Branch And Clean"
+                description="Get ticket branch name then clean"
                 icon="/icons/download/download.svg">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
         </action>
