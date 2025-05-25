@@ -4,6 +4,18 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2025-03-21
+
+- Changelog update - `0.1.1` by @github-actions in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/38
+- Bump io.mockk:mockk from 1.13.14 to 1.13.16 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/35
+- Bump org.jetbrains.kotlin.jvm from 2.1.0 to 2.1.10 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/39
+- Bump io.mockk:mockk from 1.13.16 to 1.13.17 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/41
+- Bump org.jetbrains.intellij.platform from 2.2.1 to 2.3.0 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/40
+- Bump org.jetbrains.kotlin.jvm from 2.1.10 to 2.1.20 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/43
+- Bump org.jetbrains.intellij.platform from 2.3.0 to 2.4.0 by @dependabot in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/42
+- Copilot friendly cleaning by @Hiosdra in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/44
+- Update intellij platform minimum & 0.2.0 by @Hiosdra in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/46
+
 ## [0.1.1] - 2025-01-20
 
 - Changelog update - `0.1.0` by @github-actions in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/30
@@ -34,7 +46,8 @@
 - Enable plugin signing
 - Proper versioning from now on
 
-[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.0.3...v0.1.0
 [0.0.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/commits/v0.0.3
