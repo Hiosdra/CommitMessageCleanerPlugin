@@ -1,6 +1,5 @@
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
-import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 
 plugins {
@@ -86,7 +85,6 @@ intellijPlatform {
 
         ideaVersion {
             sinceBuild = providers.gradleProperty("pluginSinceBuild")
-            untilBuild = providers.gradleProperty("pluginUntilBuild")
         }
     }
 
@@ -155,15 +153,6 @@ intellijPlatformTesting {
 
             plugins {
                 robotServerPlugin()
-            }
-        }
-        create("runIntelliJLatestEAP") {
-            type = IntelliJPlatformType.IntellijIdeaCommunity
-            useInstaller = false
-            val versionProvider = providers.gradleProperty("runPlatformLatestVersion").orElse("LATEST-EAP-SNAPSHOT")
-            version = versionProvider
-            sandboxDirectory = providers.zip(layout.buildDirectory.dir("idea-sandbox/runIntelliJ"), versionProvider) { dir, version ->
-                dir.dir(version)
             }
         }
     }
