@@ -20,12 +20,7 @@ on:
   # Trigger the workflow on any pull request
   pull_request:
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
-  
 jobs:
-
   # Prepare the environment and build the plugin
   build:
     name: Build
