@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.hiosdra.commitmessagecleanerplugin</id>
+    <id>com.hiosdra.commitmessagecleaner</id>
     <name>CommitMessageCleaner</name>
     <vendor>Hiosdra</vendor>
 
@@ -11,16 +11,16 @@
     <depends>Git4Idea</depends>
 
     <actions>
-        <action id="com.hiosdra.commitmessagecleanerplugin.RemoveDashAction"
-                class="com.hiosdra.commitmessagecleanerplugin.CleanCommitMessageAction"
+        <action id="com.hiosdra.commitmessagecleaner.RemoveDashAction"
+                class="com.hiosdra.commitmessagecleaner.CleanCommitMessageAction"
                 text="Clean Commit Message"
                 description="Clean commit message"
                 icon="/icons/clearCash/clearCash.svg">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
             <!--<keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>-->
         </action>
-        <action id="com.hiosdra.commitmessagecleanerplugin.GetFromBranchAndCleanAction"
-                class="com.hiosdra.commitmessagecleanerplugin.GetFromBranchAndCleanAction"
+        <action id="com.hiosdra.commitmessagecleaner.GetFromBranchAndCleanAction"
+                class="com.hiosdra.commitmessagecleaner.GetFromBranchAndCleanAction"
                 text="Get Ticket From Branch And Clean"
                 description="Get ticket branch name then clean"
                 icon="/icons/download/download.svg">
