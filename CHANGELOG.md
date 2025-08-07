@@ -8,6 +8,19 @@
 
 **Full Changelog**: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.2...0.2.3
 
+## [0.2.1] - 2025-08-05
+
+- Bump io.mockk:mockk from 1.13.17 to 1.14.2 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/53
+- Bump org.gradle.toolchains.foojay-resolver-convention from 0.9.0 to 1.0.0 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/58
+- Changelog update - `0.2.0` by @github-actions[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/47
+- Bump JetBrains/qodana-action from 2024.3.4 to 2025.1.1 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/54
+- Bump org.jetbrains.qodana from 2024.3.4 to 2025.1.1 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/55
+- Bump org.jetbrains.kotlin.jvm from 2.1.20 to 2.1.21 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/56
+- Initialize JetBrains Junie 🚀 by @jetbrains-junie[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/59
+- Bump io.mockk:mockk from 1.14.2 to 1.14.4 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/60
+- Bump org.jetbrains.kotlin.jvm from 2.1.21 to 2.2.0 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/61
+- @jetbrains-junie[bot] made their first contribution in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/59
+
 ## [0.2.0] - 2025-03-21
 
 - Changelog update - `0.1.1` by @github-actions in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/38
@@ -51,7 +64,8 @@
 - Proper versioning from now on
 
 [Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.3...HEAD
-[0.2.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...v0.2.3
+[0.2.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.1...v0.2.3
+[0.2.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.0.3...v0.1.0
