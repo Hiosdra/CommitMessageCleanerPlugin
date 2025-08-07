@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [0.2.3] - 2025-08-07
+
+**Full Changelog**: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.2...0.2.3
+
 ## [0.2.0] - 2025-03-21
 
 - Changelog update - `0.1.1` by @github-actions in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/38
@@ -46,7 +50,8 @@
 - Enable plugin signing
 - Proper versioning from now on
 
-[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...v0.2.3
 [0.2.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.0.3...v0.1.0
