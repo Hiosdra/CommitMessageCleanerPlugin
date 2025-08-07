@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [0.2.3] - 2025-08-07
+
+**Full Changelog**: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.2...0.2.3
+
 ## [0.2.1] - 2025-08-05
 
 - Bump io.mockk:mockk from 1.13.17 to 1.14.2 by @dependabot[bot] in https://github.com/Hiosdra/CommitMessageCleanerPlugin/pull/53
@@ -59,7 +63,8 @@
 - Enable plugin signing
 - Proper versioning from now on
 
-[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.1...v0.2.3
 [0.2.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...v0.1.1
