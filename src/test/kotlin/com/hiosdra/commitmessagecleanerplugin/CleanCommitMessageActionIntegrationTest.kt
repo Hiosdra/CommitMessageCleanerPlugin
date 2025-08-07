@@ -1,4 +1,4 @@
-package com.hiosdra.commitmessagecleaner
+package com.hiosdra.commitmessagecleanerplugin
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

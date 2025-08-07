@@ -1,4 +1,4 @@
-package com.hiosdra.commitmessagecleaner
+package com.hiosdra.commitmessagecleanerplugin
 
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType

@@ -1,4 +1,4 @@
-package com.hiosdra.commitmessagecleaner
+package com.hiosdra.commitmessagecleanerplugin
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-package com.hiosdra.commitmessagecleaner
+package com.hiosdra.commitmessagecleanerplugin
 
 import com.intellij.openapi.util.NlsSafe
 
