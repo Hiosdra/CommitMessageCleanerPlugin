@@ -3,8 +3,9 @@ coverage:
     project:
       default:
         informational: true
-        threshold: 0%
+        threshold: 50%
         base: auto
     patch:
       default:
         informational: true
+        threshold: 75%
