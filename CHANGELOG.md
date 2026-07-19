@@ -4,6 +4,23 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Sync scaffolding with the IntelliJ Platform Plugin Template `2.6.0` base (was `2.0.2`):
+  upgrade Gradle Wrapper to `9.5.0`, bump `org.jetbrains.intellij.platform` to `2.16.0`,
+  move IntelliJ Platform/Maven repositories to `settings.gradle.kts`, drop the now-redundant
+  `signing`/`publishing`/`pluginVerification` blocks in `build.gradle.kts` (defaulted since
+  IntelliJ Platform Gradle Plugin `2.14.0`), update GitHub Actions (`actions/checkout`,
+  `gradle/actions/setup-gradle`, `actions/upload-artifact`) and sandbox paths in `.run/*.xml`
+  and `.idea/gradle.xml` to match the plugin's `.intellijPlatform/sandbox` layout.
+
+### Fixed
+
+- `release.yml`: fix the `Create Pull Request` step condition, which referenced a
+  non-existent `steps.properties.outputs.changelog` and never actually ran.
+- `build.yml`: handle an empty release-drafts list in the cleanup step with `xargs -r`,
+  and add the missing Java/Gradle setup to the `releaseDraft` job.
+
 ## [0.2.3] - 2025-08-07
 
 **Full Changelog**: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.2...0.2.3
