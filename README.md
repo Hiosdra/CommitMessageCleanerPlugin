@@ -36,7 +36,7 @@
 
 
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template]. Current template version base: `2.0.2`
+Plugin based on the [IntelliJ Platform Plugin Template][template]. Current template version base: `2.6.0`
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
