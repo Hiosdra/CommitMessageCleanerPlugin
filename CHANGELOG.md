@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-07-19
+
 ### Changed
 
 - Sync scaffolding with the IntelliJ Platform Plugin Template `2.6.0` base (was `2.0.2`):
