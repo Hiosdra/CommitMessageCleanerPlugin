@@ -82,10 +82,11 @@
 - Enable plugin signing
 - Proper versioning from now on
 
-[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.3...HEAD
-[0.2.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.1...v0.2.3
-[0.2.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.2.0...v0.2.1
-[0.2.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.1...v0.2.0
-[0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/v0.0.3...v0.1.0
-[0.0.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/commits/v0.0.3
+[Unreleased]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.5...HEAD
+[0.2.5]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.3...0.2.5
+[0.2.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.1...0.2.3
+[0.2.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.2.0...0.2.1
+[0.2.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.1.1...0.2.0
+[0.1.1]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.1.0...0.1.1
+[0.1.0]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/compare/0.0.3...0.1.0
+[0.0.3]: https://github.com/Hiosdra/CommitMessageCleanerPlugin/commits/0.0.3
