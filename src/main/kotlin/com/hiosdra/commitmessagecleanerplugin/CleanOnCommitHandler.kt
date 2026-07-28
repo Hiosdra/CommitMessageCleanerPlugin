@@ -21,7 +21,7 @@ class CleanOnCommitHandler(private val panel: CheckinProjectPanel) : CheckinHand
         val original = panel.commitMessage
         val cleaned = clean(settings, original)
         if (cleaned != original) {
-            panel.setCommitMessage(cleaned)
+            panel.commitMessage = cleaned
         }
         return ReturnResult.COMMIT
     }

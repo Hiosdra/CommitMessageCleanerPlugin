@@ -68,7 +68,7 @@ class CleanerConfigurable : Configurable {
                         .comment("Used only in the Conventional Commits style when no type is detected.")
                 }
             }
-            group("Ticket detection") {
+            group("Ticket Detection") {
                 row("Ticket regex:") {
                     textField()
                         .bindText(model::ticketRegex)
