@@ -13,6 +13,18 @@
   <br />
   The <code>Get Ticket From Branch And Clean</code> action uses the current Git branch name to extract a ticket identifier and applies it to the commit message.
 </p>
+<p>Both actions are configurable under <code>Settings/Preferences | Tools | Commit Message Cleaner</code>:</p>
+<ul>
+  <li><b>Format style</b> — the classic <code>ABC-123 | Message</code> ticket-prefix style, or <b>Conventional Commits</b> (<code>feat(ABC-123): message</code>).</li>
+  <li><b>Separator</b> and <b>capitalization</b> of the message.</li>
+  <li><b>Ticket regex</b> so teams that don't use Jira-style ids are supported too.</li>
+  <li><b>Clean on commit</b> — clean the message automatically right before committing, so it never gets forgotten.</li>
+  <li><b>Preview notification</b> — an optional before/after balloon after each clean.</li>
+</ul>
+<p>
+  In multi-repository (monorepo) projects the ticket is taken from the repository that owns the files
+  being committed, and both actions are also available via keyboard shortcuts and the <code>Git</code> menu.
+</p>
 <!-- Plugin description end -->
 
 ## Installation

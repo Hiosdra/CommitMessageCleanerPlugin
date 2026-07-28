@@ -17,7 +17,8 @@
                 description="Clean commit message"
                 icon="/icons/clearCash/clearCash.svg">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
-            <!--<keyboard-shortcut first-keystroke="ctrl -" keymap="$default"/>-->
+            <add-to-group group-id="Git.Menu" anchor="last"/>
+            <keyboard-shortcut first-keystroke="ctrl alt K" keymap="$default"/>
         </action>
         <action id="com.hiosdra.commitmessagecleanerplugin.GetFromBranchAndCleanAction"
                 class="com.hiosdra.commitmessagecleanerplugin.GetFromBranchAndCleanAction"
@@ -25,10 +26,19 @@
                 description="Get ticket branch name then clean"
                 icon="/icons/download/download.svg">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="last"/>
+            <add-to-group group-id="Git.Menu" anchor="last"/>
+            <keyboard-shortcut first-keystroke="ctrl alt shift K" keymap="$default"/>
         </action>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                parentId="tools"
+                id="com.hiosdra.commitmessagecleanerplugin.settings.CleanerConfigurable"
+                instance="com.hiosdra.commitmessagecleanerplugin.settings.CleanerConfigurable"
+                displayName="Commit Message Cleaner"/>
+        <checkinHandlerFactory
+                implementation="com.hiosdra.commitmessagecleanerplugin.CleanOnCommitHandlerFactory"/>
         <notificationGroup
                 id="Commit Message Cleaner"
                 displayType="BALLOON"/>
