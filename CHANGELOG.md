@@ -4,6 +4,26 @@
 
 ## [Unreleased]
 
+### Added
+
+- **Settings panel** (`Settings/Preferences | Tools | Commit Message Cleaner`) to configure the
+  separator, message capitalization and the ticket-detection regex, so the plugin fits conventions
+  beyond the built-in Jira-style `PREFIX-123 | Message`.
+- **Conventional Commits** format style (`feat(ABC-123): message`) with type detection and the
+  branch ticket used as scope.
+- **Clean on commit**: an opt-in `CheckinHandler` that cleans the commit message automatically right
+  before the commit is created.
+- **Optional before/after preview** balloon after a manual clean.
+- **Keyboard shortcuts** (`Ctrl+Alt+K` / `Ctrl+Alt+Shift+K`) and entries in the `Git` menu for both
+  actions.
+
+### Changed
+
+- **Multi-repository / monorepo support**: `Get Ticket From Branch And Clean` now resolves the Git
+  repository from the files included in the commit instead of always using the first one.
+- Cleaning of an unchanged message is now a no-op (no spurious document modification), and the
+  whole-text replacement stays a single Undo step.
+
 ## [0.2.5] - 2026-07-19
 
 ### Changed
